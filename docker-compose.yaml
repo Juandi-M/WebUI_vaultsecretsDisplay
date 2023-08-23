@@ -10,5 +10,3 @@ services:
     volumes:
       - ./web/js:/app # Assuming your application code is in the ./web/js directory
       - ./web/configs/:/app/configs # Additional volume for configurations
-    environment:
-      NODE_PATH: /jsproject/node_modules # Environment variable
