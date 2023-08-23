@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  my-nodejs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile # Assuming the Dockerfile is in the same directory
+    ports:
+      - "3001:3001" # Mapping the host port 3001 to the container's port 3001
+    user: appuser
+    volumes:
+      - ./web/js:/app # Assuming your application code is in the ./web/js directory
+      - ./web/configs/:/app/configs # Additional volume for configurations
+    environment:
+      NODE_PATH: /jsproject/node_modules # Environment variable
