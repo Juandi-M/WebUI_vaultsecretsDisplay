@@ -14,5 +14,5 @@ services:
     stop_grace_period: 5s
     user: appuser
     volumes:
-      - ./web/js:/app 
+      - /web/configs /app/configs/ 
       - /app/node_modules
