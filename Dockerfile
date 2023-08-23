@@ -15,6 +15,7 @@ RUN npm install
 
 # Copy the application files
 COPY web/js/ ./
+COPY web/configs/ /app/configs/
 
 # Change ownership of the /jsproject directory to appuser
 RUN chown -R appuser:appuser /app
